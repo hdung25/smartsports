@@ -31,7 +31,10 @@
       "Bash(curl -s -o /dev/null -w \"Events: %{http_code}\\\\n\" https://smartsports.vercel.app/events)",
       "Bash(ls \"D:/smartsport/image/\" 2>&1; echo \"---\"; ls \"D:/smartsports/image/\" 2>&1 | grep -i new)",
       "Bash(cp \"D:/smartsport/image/pic1new.png\" \"D:/smartsports/public/images/pic1new.png\")",
-      "Bash(cp \"D:/smartsport/image/pic1new.png\" \"D:/smartsports/image/pic1new.png\")"
+      "Bash(cp \"D:/smartsport/image/pic1new.png\" \"D:/smartsports/image/pic1new.png\")",
+      "Bash(curl -sL --max-time 30 -A \"Mozilla/5.0\" \"https://upload.wikimedia.org/wikipedia/commons/3/32/Blank_US_Map_%28states_only%29.svg\" -o \"D:/smartsports/public/images/us-map.svg\")",
+      "Bash(cp /tmp/test.svg \"D:/smartsports/public/images/us-map.svg\" && ls -la \"D:/smartsports/public/images/us-map.svg\")",
+      "Bash(curl -sI http://localhost:3000/images/us-map.svg)"
     ]
   }
 }

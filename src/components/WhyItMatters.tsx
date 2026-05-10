@@ -27,13 +27,15 @@ export default function WhyItMatters() {
     >
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-[0.06]"
+        className="pointer-events-none absolute inset-0 opacity-60"
         style={{
-          backgroundImage:
-            "radial-gradient(circle at 1px 1px, white 1px, transparent 0)",
-          backgroundSize: "24px 24px",
+          backgroundImage: "url('/images/us-map-dots.svg')",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
         }}
       />
+
       <div className="container-x relative">
         <h2 className="text-center text-3xl lg:text-4xl uppercase tracking-wide">
           Why It Matters
