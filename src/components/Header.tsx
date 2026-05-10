@@ -15,7 +15,7 @@ export default function Header() {
       <div className="container-x relative flex items-start justify-between py-6 lg:py-8">
         <Link href="/" className="block shrink-0">
           <Image
-            src="/images/logo.png"
+            src="/images/logonew.png"
             alt="Smart Sports"
             width={200}
             height={120}

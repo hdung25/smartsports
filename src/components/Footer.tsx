@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="container-x py-14 grid grid-cols-1 lg:grid-cols-4 gap-10">
         <div>
           <Image
-            src="/images/logo.png"
+            src="/images/logonew.png"
             alt="Smart Sports"
             width={220}
             height={140}
