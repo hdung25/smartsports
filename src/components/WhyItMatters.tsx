@@ -32,7 +32,7 @@ export default function WhyItMatters() {
           backgroundImage: "url('/images/us-map-dots.svg')",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
-          backgroundSize: "cover",
+          backgroundSize: "contain",
         }}
       />
 
