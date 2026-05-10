@@ -1,27 +1,27 @@
 import Image from "next/image";
 import Link from "next/link";
-import { MapPin, Phone, Mail, Instagram, Facebook } from "lucide-react";
+import { MapPin, Phone, Mail, Instagram, Linkedin } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-white border-t border-slate-200">
+    <footer className="bg-white">
       <div className="container-x py-14 grid grid-cols-1 lg:grid-cols-4 gap-10">
         <div>
           <Image
             src="/images/logo.png"
             alt="Smart Sports"
-            width={180}
-            height={110}
-            className="h-auto w-[160px]"
+            width={220}
+            height={140}
+            className="h-auto w-[180px]"
           />
-          <p className="mt-4 text-sm text-brand-muted">
-            Smart Sports is a registered 501(c)3 nonprofit
+          <p className="mt-4 text-sm text-brand-ink">
+            Smart Sports is a registered 501 (c)3 nonprofit
           </p>
           <Link
             href="#support"
-            className="mt-4 inline-flex btn-green text-sm uppercase tracking-wide"
+            className="mt-4 inline-flex btn-green text-sm"
           >
-            Support the Work
+            Support the work
           </Link>
         </div>
 
@@ -45,35 +45,52 @@ export default function Footer() {
           </ul>
           <h4 className="text-brand-blue font-bold mt-6 mb-3">Follow Us</h4>
           <div className="flex items-center gap-3">
-            <Link href="#" aria-label="Instagram" className="text-brand-orange hover:opacity-80">
-              <Instagram size={22} />
+            <Link
+              href="#"
+              aria-label="Instagram"
+              className="w-9 h-9 rounded-full bg-brand-orange text-white flex items-center justify-center hover:opacity-90"
+            >
+              <Instagram size={18} />
             </Link>
-            <Link href="#" aria-label="Facebook" className="text-brand-blue hover:opacity-80">
-              <Facebook size={22} />
+            <Link
+              href="#"
+              aria-label="LinkedIn"
+              className="w-9 h-9 rounded-full bg-brand-orange text-white flex items-center justify-center hover:opacity-90"
+            >
+              <Linkedin size={18} />
             </Link>
           </div>
         </div>
 
         <div>
           <h4 className="text-brand-blue font-bold mb-4">Contact</h4>
-          <ul className="space-y-3 text-brand-ink text-sm">
-            <li className="flex gap-2">
-              <MapPin size={18} className="text-brand-orange shrink-0 mt-0.5" />
-              <span>3340 N Hamilton Ave, Unit 1,<br />Chicago, IL 60618</span>
+          <ul className="space-y-4 text-brand-ink text-sm">
+            <li className="flex gap-3">
+              <span className="w-8 h-8 rounded-full bg-brand-orange text-white flex items-center justify-center shrink-0">
+                <MapPin size={16} />
+              </span>
+              <span className="leading-snug pt-1">
+                3340 N Hamilton Ave,
+                <br />Unit 1, Chicago, IL 60618
+              </span>
             </li>
-            <li className="flex gap-2">
-              <Phone size={18} className="text-brand-orange shrink-0" />
+            <li className="flex gap-3 items-center">
+              <span className="w-8 h-8 rounded-full bg-brand-orange text-white flex items-center justify-center shrink-0">
+                <Phone size={16} />
+              </span>
               <span>773-705-3102</span>
             </li>
-            <li className="flex gap-2">
-              <Mail size={18} className="text-brand-orange shrink-0" />
+            <li className="flex gap-3 items-center">
+              <span className="w-8 h-8 rounded-full bg-brand-orange text-white flex items-center justify-center shrink-0">
+                <Mail size={16} />
+              </span>
               <span>info@mysmartsports.org</span>
             </li>
           </ul>
         </div>
       </div>
 
-      <div className="border-t border-slate-200">
+      <div className="border-t-2 border-brand-orange">
         <div className="container-x py-5 text-center text-sm text-brand-muted">
           © 2026 Smart Sports. All rights reserved.
         </div>

@@ -12,7 +12,21 @@
       "Bash(taskkill //F //PID 19416)",
       "Bash(git config *)",
       "Bash(git init *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git remote *)",
+      "Bash(gh auth *)",
+      "Bash(where.exe gh *)",
+      "Bash(git push *)",
+      "Bash(where.exe vercel *)",
+      "Bash(vercel --version)",
+      "Bash(vercel whoami *)",
+      "Bash(vercel --prod --yes)",
+      "Bash(vercel --prod --yes --scope ha-huy-dungs-projects)",
+      "Bash(curl -s -o /dev/null -w \"Home: HTTP %{http_code}\\\\n\" https://smartsports.vercel.app/)",
+      "Bash(curl -s -o /dev/null -w \"Events: HTTP %{http_code}\\\\n\" https://smartsports.vercel.app/events)",
+      "Bash(find \"D:/smartsports\" -iname \"*pic1new*\" 2>&1; find \"C:/Users/Admin/Downloads\" -iname \"*pic1new*\" 2>&1 | head -5; find \"C:/Users/Admin/Pictures\" -iname \"*pic1new*\" 2>&1 | head -5; find \"C:/Users/Admin/Desktop\" -iname \"*pic1new*\" 2>&1 | head -5)",
+      "WebFetch(domain:www.figma.com)"
     ]
   }
 }

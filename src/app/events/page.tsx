@@ -1,9 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
+import UpcomingEvents from "@/components/UpcomingEvents";
+import HostAnEvent from "@/components/HostAnEvent";
+import EventCategories from "@/components/EventCategories";
+import StayConnected from "@/components/StayConnected";
+import BuildWhatsNext from "@/components/BuildWhatsNext";
 
-export default function EventsPage() {
+function EventsHero() {
   return (
-    <section className="relative w-full h-[640px] lg:h-[720px] overflow-hidden">
+    <section className="relative w-full h-[520px] lg:h-[580px] overflow-hidden">
       <Image
         src="/images/anhmoi1.png"
         alt="Youth playing basketball"
@@ -12,8 +17,8 @@ export default function EventsPage() {
         className="object-cover object-center"
         sizes="100vw"
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/25 to-transparent" />
-      <div className="relative container-x h-full flex items-end pb-20">
+      <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/20 to-transparent" />
+      <div className="relative container-x h-full flex items-end pb-16">
         <div className="max-w-xl text-white">
           <h1 className="text-5xl lg:text-7xl font-extrabold leading-tight">
             Events
@@ -23,7 +28,7 @@ export default function EventsPage() {
             <br />
             through sports and learning
           </p>
-          <div className="mt-8 flex flex-wrap items-center gap-4">
+          <div className="mt-7 flex flex-wrap items-center gap-4">
             <Link href="#find" className="btn-orange text-sm">
               Find an Event
             </Link>
@@ -37,5 +42,18 @@ export default function EventsPage() {
         </div>
       </div>
     </section>
+  );
+}
+
+export default function EventsPage() {
+  return (
+    <>
+      <EventsHero />
+      <UpcomingEvents />
+      <HostAnEvent />
+      <EventCategories />
+      <StayConnected />
+      <BuildWhatsNext />
+    </>
   );
 }
