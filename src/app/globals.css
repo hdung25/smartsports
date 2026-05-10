@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white text-brand-ink font-sans antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-container px-6 lg:px-10;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center font-semibold rounded-full px-6 py-3 transition-colors;
+  }
+  .btn-orange {
+    @apply btn bg-brand-orange text-white hover:bg-orange-600;
+  }
+  .btn-green {
+    @apply btn bg-brand-green text-white hover:bg-brand-green-dark;
+  }
+  .btn-outline-white {
+    @apply btn border-2 border-white text-white hover:bg-white hover:text-brand-blue;
+  }
+  .btn-outline-blue {
+    @apply btn border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white;
+  }
+}
