@@ -26,7 +26,12 @@
       "Bash(curl -s -o /dev/null -w \"Home: HTTP %{http_code}\\\\n\" https://smartsports.vercel.app/)",
       "Bash(curl -s -o /dev/null -w \"Events: HTTP %{http_code}\\\\n\" https://smartsports.vercel.app/events)",
       "Bash(find \"D:/smartsports\" -iname \"*pic1new*\" 2>&1; find \"C:/Users/Admin/Downloads\" -iname \"*pic1new*\" 2>&1 | head -5; find \"C:/Users/Admin/Pictures\" -iname \"*pic1new*\" 2>&1 | head -5; find \"C:/Users/Admin/Desktop\" -iname \"*pic1new*\" 2>&1 | head -5)",
-      "WebFetch(domain:www.figma.com)"
+      "WebFetch(domain:www.figma.com)",
+      "Bash(curl -s -o /dev/null -w \"Home: %{http_code}\\\\n\" https://smartsports.vercel.app/)",
+      "Bash(curl -s -o /dev/null -w \"Events: %{http_code}\\\\n\" https://smartsports.vercel.app/events)",
+      "Bash(ls \"D:/smartsport/image/\" 2>&1; echo \"---\"; ls \"D:/smartsports/image/\" 2>&1 | grep -i new)",
+      "Bash(cp \"D:/smartsport/image/pic1new.png\" \"D:/smartsports/public/images/pic1new.png\")",
+      "Bash(cp \"D:/smartsport/image/pic1new.png\" \"D:/smartsports/image/pic1new.png\")"
     ]
   }
 }
