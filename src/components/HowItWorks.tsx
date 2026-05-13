@@ -33,7 +33,7 @@ export default function HowItWorks() {
       {/* texture corners */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-20 -left-20 w-[420px] h-[420px] sm:w-[560px] sm:h-[560px]"
+        className="pointer-events-none absolute top-0 left-0 w-48 h-48 sm:w-72 sm:h-72"
         style={{
           backgroundImage: "url('/images/hieuung-bg.png')",
           backgroundRepeat: "no-repeat",
@@ -43,7 +43,7 @@ export default function HowItWorks() {
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute -bottom-20 -right-20 w-[420px] h-[420px] sm:w-[560px] sm:h-[560px] rotate-180"
+        className="pointer-events-none absolute bottom-0 right-0 w-48 h-48 sm:w-72 sm:h-72 rotate-180"
         style={{
           backgroundImage: "url('/images/hieuung-bg.png')",
           backgroundRepeat: "no-repeat",

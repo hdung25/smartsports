@@ -5,6 +5,7 @@ import HostAnEvent from "@/components/HostAnEvent";
 import EventCategories from "@/components/EventCategories";
 import StayConnected from "@/components/StayConnected";
 import BuildWhatsNext from "@/components/BuildWhatsNext";
+import RevealOnScroll from "@/components/RevealOnScroll";
 
 function EventsHero() {
   return (
@@ -49,11 +50,21 @@ export default function EventsPage() {
   return (
     <>
       <EventsHero />
-      <UpcomingEvents />
-      <HostAnEvent />
-      <EventCategories />
-      <StayConnected />
-      <BuildWhatsNext />
+      <RevealOnScroll>
+        <UpcomingEvents />
+      </RevealOnScroll>
+      <RevealOnScroll>
+        <HostAnEvent />
+      </RevealOnScroll>
+      <RevealOnScroll>
+        <EventCategories />
+      </RevealOnScroll>
+      <RevealOnScroll>
+        <StayConnected />
+      </RevealOnScroll>
+      <RevealOnScroll>
+        <BuildWhatsNext />
+      </RevealOnScroll>
     </>
   );
 }

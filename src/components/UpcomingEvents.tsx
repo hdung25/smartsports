@@ -54,8 +54,28 @@ const events: {
 
 export default function UpcomingEvents() {
   return (
-    <section className="bg-white py-14 sm:py-20">
-      <div className="container-x">
+    <section className="relative bg-white py-14 sm:py-20 overflow-hidden">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute top-0 right-0 w-48 h-48 sm:w-72 sm:h-72 -scale-x-100"
+        style={{
+          backgroundImage: "url('/images/hieuung-bg.png')",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "contain",
+          backgroundPosition: "top left",
+        }}
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute bottom-0 left-0 w-48 h-48 sm:w-72 sm:h-72 -scale-y-100"
+        style={{
+          backgroundImage: "url('/images/hieuung-bg.png')",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "contain",
+          backgroundPosition: "top left",
+        }}
+      />
+      <div className="container-x relative">
         <h2 className="text-center text-2xl sm:text-3xl lg:text-4xl text-brand-blue uppercase tracking-wide">
           Upcoming Events
         </h2>

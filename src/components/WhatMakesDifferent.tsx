@@ -29,7 +29,7 @@ export default function WhatMakesDifferent() {
       {/* texture corners */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-20 -right-20 w-[420px] h-[420px] sm:w-[560px] sm:h-[560px] -scale-x-100"
+        className="pointer-events-none absolute top-0 right-0 w-48 h-48 sm:w-72 sm:h-72 -scale-x-100"
         style={{
           backgroundImage: "url('/images/hieuung-bg.png')",
           backgroundRepeat: "no-repeat",
@@ -39,7 +39,7 @@ export default function WhatMakesDifferent() {
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute -bottom-20 -left-20 w-[420px] h-[420px] sm:w-[560px] sm:h-[560px] -scale-y-100"
+        className="pointer-events-none absolute bottom-0 left-0 w-48 h-48 sm:w-72 sm:h-72 -scale-y-100"
         style={{
           backgroundImage: "url('/images/hieuung-bg.png')",
           backgroundRepeat: "no-repeat",

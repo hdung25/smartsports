@@ -67,7 +67,7 @@ export default function Testimonials() {
       {/* Texture top-right */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-16 -right-16 w-[380px] h-[380px] sm:w-[520px] sm:h-[520px] -scale-x-100"
+        className="pointer-events-none absolute top-0 right-0 w-48 h-48 sm:w-72 sm:h-72 -scale-x-100"
         style={{
           backgroundImage: "url('/images/hieuung-bg.png')",
           backgroundRepeat: "no-repeat",
@@ -78,7 +78,7 @@ export default function Testimonials() {
       {/* Texture bottom-left */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -bottom-16 -left-16 w-[380px] h-[380px] sm:w-[520px] sm:h-[520px] -scale-y-100"
+        className="pointer-events-none absolute bottom-0 left-0 w-48 h-48 sm:w-72 sm:h-72 -scale-y-100"
         style={{
           backgroundImage: "url('/images/hieuung-bg.png')",
           backgroundRepeat: "no-repeat",

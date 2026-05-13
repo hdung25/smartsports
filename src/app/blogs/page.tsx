@@ -173,7 +173,7 @@ function BlogTopics() {
     <section className="relative bg-white py-14 sm:py-20 overflow-hidden">
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-20 -left-20 w-[380px] h-[380px] sm:w-[520px] sm:h-[520px]"
+        className="pointer-events-none absolute top-0 left-0 w-48 h-48 sm:w-72 sm:h-72"
         style={{
           backgroundImage: "url('/images/hieuung-bg.png')",
           backgroundRepeat: "no-repeat",
@@ -183,7 +183,7 @@ function BlogTopics() {
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute -bottom-20 -right-20 w-[380px] h-[380px] sm:w-[520px] sm:h-[520px] rotate-180"
+        className="pointer-events-none absolute bottom-0 right-0 w-48 h-48 sm:w-72 sm:h-72 rotate-180"
         style={{
           backgroundImage: "url('/images/hieuung-bg.png')",
           backgroundRepeat: "no-repeat",
