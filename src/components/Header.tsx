@@ -67,14 +67,22 @@ export default function Header() {
           </nav>
         </div>
 
-        {/* Mobile: hamburger */}
-        <button
-          onClick={() => setOpen((o) => !o)}
-          aria-label="Toggle menu"
-          className="md:hidden w-10 h-10 flex items-center justify-center rounded-md text-brand-blue hover:bg-slate-100"
-        >
-          {open ? <X size={26} /> : <Menu size={26} />}
-        </button>
+        {/* Mobile: support button + hamburger */}
+        <div className="md:hidden flex items-center gap-2">
+          <Link
+            href="#support"
+            className="btn-green text-[11px] uppercase tracking-wide px-3 py-2 rounded-full"
+          >
+            Support
+          </Link>
+          <button
+            onClick={() => setOpen((o) => !o)}
+            aria-label="Toggle menu"
+            className="w-10 h-10 flex items-center justify-center rounded-md text-brand-blue hover:bg-slate-100"
+          >
+            {open ? <X size={26} /> : <Menu size={26} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile drawer */}

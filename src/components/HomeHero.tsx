@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function HomeHero() {
   return (
-    <section className="relative w-full h-[520px] sm:h-[540px] lg:h-[600px] overflow-hidden">
+    <section className="relative w-full h-[640px] sm:h-[600px] lg:h-[600px] overflow-hidden">
       <Image
         src="/images/pic1new.png"
         alt="Coach with students"
@@ -13,8 +13,8 @@ export default function HomeHero() {
         className="object-cover object-center"
         sizes="100vw"
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/20 lg:to-transparent" />
-      <div className="relative h-full flex items-center">
+      <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/55 to-black/70 sm:bg-gradient-to-r sm:from-black/80 sm:via-black/55 sm:to-black/20 lg:to-transparent" />
+      <div className="relative h-full flex items-end sm:items-center pb-8 sm:pb-0">
         <div className="w-full max-w-container mx-auto px-5 sm:px-6 lg:pl-10 lg:pr-0">
           <div className="max-w-full sm:max-w-[80%] md:max-w-[55%] lg:max-w-[42%] text-white">
             <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-extrabold leading-[1.08]">
