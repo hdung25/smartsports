@@ -7,10 +7,10 @@ export default function StayConnected() {
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <section className="bg-white py-12">
-      <div className="container-x grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+    <section className="bg-white py-10 sm:py-12">
+      <div className="container-x grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center">
         <div>
-          <h2 className="text-2xl lg:text-3xl text-brand-blue uppercase tracking-wide">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl text-brand-blue uppercase tracking-wide">
             Stay Connected
           </h2>
           <p className="mt-2 text-sm text-brand-ink">

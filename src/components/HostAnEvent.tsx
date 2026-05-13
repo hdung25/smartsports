@@ -11,9 +11,9 @@ const points = [
 
 export default function HostAnEvent() {
   return (
-    <section className="bg-brand-surface py-20">
-      <div className="container-x grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div className="relative h-[360px] lg:h-[460px] rounded-2xl overflow-hidden">
+    <section className="bg-brand-surface py-14 sm:py-20">
+      <div className="container-x grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="relative h-[280px] sm:h-[360px] lg:h-[460px] rounded-2xl overflow-hidden">
           <Image
             src="/images/anhmoi4.png"
             alt="Kids playing soccer"
@@ -24,7 +24,7 @@ export default function HostAnEvent() {
         </div>
 
         <div>
-          <h2 className="text-3xl lg:text-4xl text-brand-blue uppercase tracking-wide">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl text-brand-blue uppercase tracking-wide">
             Host an Event
           </h2>
           <p className="mt-3 text-brand-ink font-semibold">

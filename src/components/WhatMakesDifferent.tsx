@@ -3,22 +3,22 @@ import Image from "next/image";
 const items = [
   {
     img: "/images/wmd1.png",
-    title: "Not just sports",
+    title: "Not Just Sports",
     desc: "Sports are the entry point, not the outcome.",
   },
   {
     img: "/images/wmd2.jpg",
-    title: "Not just academics",
+    title: "Not Just Academics",
     desc: "Scholars apply learning in practical, hands-on scenarios, not abstract instruction.",
   },
   {
     img: "/images/wmd3.png",
-    title: "Not just exposure",
+    title: "Not Just Exposure",
     desc: "Career pathways are introduced early and intentionally.",
   },
   {
     img: "/images/wmd4.jpg",
-    title: "Not just participation",
+    title: "Not Just Participation",
     desc: "Every experience is designed to prepare youth for what comes next.",
   },
 ];
@@ -29,20 +29,22 @@ export default function WhatMakesDifferent() {
       {/* texture corners */}
       <div
         aria-hidden
-        className="pointer-events-none absolute top-0 right-0 w-80 h-80 opacity-80 rotate-90"
+        className="pointer-events-none absolute -top-20 -right-20 w-[420px] h-[420px] sm:w-[560px] sm:h-[560px] -scale-x-100"
         style={{
           backgroundImage: "url('/images/hieuung-bg.png')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "contain",
+          backgroundPosition: "top left",
         }}
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute bottom-0 left-0 w-80 h-80 opacity-80 -rotate-90"
+        className="pointer-events-none absolute -bottom-20 -left-20 w-[420px] h-[420px] sm:w-[560px] sm:h-[560px] -scale-y-100"
         style={{
           backgroundImage: "url('/images/hieuung-bg.png')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "contain",
+          backgroundPosition: "top left",
         }}
       />
 

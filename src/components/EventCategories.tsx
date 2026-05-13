@@ -36,28 +36,28 @@ const categories = [
 
 export default function EventCategories() {
   return (
-    <section className="bg-white py-20">
+    <section className="bg-white py-14 sm:py-20">
       <div className="container-x">
-        <h2 className="text-center text-3xl lg:text-4xl text-brand-blue uppercase tracking-wide">
+        <h2 className="text-center text-2xl sm:text-3xl lg:text-4xl text-brand-blue uppercase tracking-wide">
           Event Categories
         </h2>
-        <p className="text-center mt-3 text-brand-ink/80 font-medium">
+        <p className="text-center mt-3 text-sm sm:text-base text-brand-ink/80 font-medium px-2">
           Explore events that match your interests.
         </p>
 
-        <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
+        <div className="mt-8 sm:mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5">
           {categories.map(({ icon: Icon, bg, title, desc }) => (
             <div
               key={title}
-              className="bg-white rounded-2xl p-6 text-center border border-slate-100 shadow-[0_6px_20px_rgba(15,27,61,0.06)]"
+              className="bg-white rounded-2xl p-5 sm:p-6 text-center border border-slate-100 shadow-[0_6px_20px_rgba(15,27,61,0.06)]"
             >
               <div
-                className={`mx-auto w-16 h-16 rounded-full ${bg} flex items-center justify-center text-white`}
+                className={`mx-auto w-14 h-14 sm:w-16 sm:h-16 rounded-full ${bg} flex items-center justify-center text-white`}
               >
-                <Icon size={28} />
+                <Icon size={26} />
               </div>
-              <h3 className="mt-5 text-brand-blue text-base">{title}</h3>
-              <p className="mt-2 text-sm text-brand-muted leading-snug">
+              <h3 className="mt-4 sm:mt-5 text-brand-blue text-sm sm:text-base">{title}</h3>
+              <p className="mt-2 text-xs sm:text-sm text-brand-muted leading-snug">
                 {desc}
               </p>
             </div>

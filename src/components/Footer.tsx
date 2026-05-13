@@ -41,7 +41,7 @@ export default function Footer() {
           <ul className="space-y-2 text-brand-ink">
             <li><Link href="#news" className="hover:text-brand-blue">News</Link></li>
             <li><Link href="/events" className="hover:text-brand-blue">Events</Link></li>
-            <li><Link href="#blogs" className="hover:text-brand-blue">Blogs</Link></li>
+            <li><Link href="/blogs" className="hover:text-brand-blue">Blogs</Link></li>
           </ul>
           <h4 className="text-brand-blue font-bold mt-6 mb-3">Follow Us</h4>
           <div className="flex items-center gap-3">

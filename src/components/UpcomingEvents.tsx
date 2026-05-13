@@ -54,16 +54,16 @@ const events: {
 
 export default function UpcomingEvents() {
   return (
-    <section className="bg-white py-20">
+    <section className="bg-white py-14 sm:py-20">
       <div className="container-x">
-        <h2 className="text-center text-3xl lg:text-4xl text-brand-blue uppercase tracking-wide">
+        <h2 className="text-center text-2xl sm:text-3xl lg:text-4xl text-brand-blue uppercase tracking-wide">
           Upcoming Events
         </h2>
-        <p className="text-center mt-3 text-brand-ink/80 font-medium">
+        <p className="text-center mt-3 text-sm sm:text-base text-brand-ink/80 font-medium px-2">
           Find ways to connect, support, and get involved in your community
         </p>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="mt-8 sm:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
           {events.map((ev, i) => (
             <article
               key={i}

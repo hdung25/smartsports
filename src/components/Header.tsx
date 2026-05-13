@@ -41,7 +41,7 @@ export default function Header() {
             </Link>
             <span className="text-brand-blue/40">|</span>
             <Link
-              href="#blogs"
+              href="/blogs"
               className="text-brand-blue font-semibold hover:text-brand-orange transition-colors"
             >
               Blogs
@@ -108,7 +108,7 @@ export default function Header() {
               Events
             </Link>
             <Link
-              href="#blogs"
+              href="/blogs"
               onClick={() => setOpen(false)}
               className="text-brand-blue font-semibold py-2"
             >
