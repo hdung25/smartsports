@@ -24,8 +24,12 @@ export const metadata: Metadata = {
   description:
     "Smart Sports integrates sports and academics to build practical skills and early exposure to career pathways that prepare youth for what comes next.",
   icons: {
-    icon: "/images/logonew.png",
-    apple: "/images/logonew.png",
+    icon: [
+      { url: "/images/favicon-32.png", sizes: "32x32" },
+      { url: "/images/favicon-192.png", sizes: "192x192" },
+    ],
+    apple: "/images/favicon-192.png",
+    other: [{ rel: "msapplication-TileImage", url: "/images/favicon-192.png" }],
   },
 };
 
