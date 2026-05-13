@@ -1,13 +1,21 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Montserrat, Open_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PageLoader from "@/components/PageLoader";
 
-const poppins = Poppins({
+const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-poppins",
+  weight: ["400", "600", "700", "800", "900"],
+  variable: "--font-montserrat",
+  display: "swap",
+});
+
+const openSans = Open_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-open-sans",
   display: "swap",
 });
 
@@ -23,8 +31,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={poppins.variable}>
+    <html lang="en" className={`${montserrat.variable} ${openSans.variable}`}>
       <body>
+        <PageLoader />
         <Header />
         <main>{children}</main>
         <Footer />

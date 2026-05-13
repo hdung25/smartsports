@@ -2,22 +2,22 @@ import Image from "next/image";
 
 const items = [
   {
-    img: "/images/pic2.png",
+    img: "/images/final_branded_drills.png",
     title: "Not just sports",
     desc: "Sports are the entry point, not the outcome.",
   },
   {
-    img: "/images/pic5.png",
+    img: "/images/final_branded_math_sports.png",
     title: "Not just academics",
     desc: "Scholars apply learning in practical, hands-on scenarios, not abstract instruction.",
   },
   {
-    img: "/images/pic4.png",
+    img: "/images/final_branded_kinetic_lab.png",
     title: "Not just exposure",
     desc: "Career pathways are introduced early and intentionally.",
   },
   {
-    img: "/images/pic3.png",
+    img: "/images/final_branded_teamwork.png",
     title: "Not just participation",
     desc: "Every experience is designed to prepare youth for what comes next.",
   },
@@ -25,8 +25,28 @@ const items = [
 
 export default function WhatMakesDifferent() {
   return (
-    <section id="about" className="bg-white py-20">
-      <div className="container-x">
+    <section id="about" className="relative bg-white py-16 overflow-hidden">
+      {/* texture corners */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute top-0 right-0 w-80 h-80 opacity-80 rotate-90"
+        style={{
+          backgroundImage: "url('/images/texture-lines.svg')",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "contain",
+        }}
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute bottom-0 left-0 w-80 h-80 opacity-80 -rotate-90"
+        style={{
+          backgroundImage: "url('/images/texture-lines.svg')",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "contain",
+        }}
+      />
+
+      <div className="container-x relative">
         <h2 className="text-center text-3xl lg:text-4xl text-brand-blue uppercase tracking-wide">
           What Makes Us Different
         </h2>
@@ -34,7 +54,7 @@ export default function WhatMakesDifferent() {
           A model designed to align learning, engagement, and future opportunity.
         </p>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {items.map((item) => (
             <div
               key={item.title}
@@ -50,7 +70,7 @@ export default function WhatMakesDifferent() {
                 />
               </div>
               <div className="p-5">
-                <h3 className="text-brand-blue text-base">{item.title}</h3>
+                <h3 className="text-brand-blue text-base font-bold">{item.title}</h3>
                 <p className="mt-2 text-sm text-brand-muted leading-relaxed">
                   {item.desc}
                 </p>

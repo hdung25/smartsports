@@ -9,18 +9,21 @@ const testimonials = [
       "Smart Sports showed me that what I learn in class actually matters. Now I see myself working in sports management.",
     name: "Marcus, Age 15",
     role: "Scholar",
+    accent: "bg-brand-orange",
   },
   {
     quote:
       "The program helped my son stay engaged in school. He's excited about his future now.",
     name: "Mrs. Johnson",
     role: "Parent",
+    accent: "bg-brand-green",
   },
   {
     quote:
       "This is exactly what our students needed — a bridge between academics and real-world opportunity.",
     name: "Coach Williams",
     role: "Coach & Mentor",
+    accent: "bg-brand-yellow",
   },
 ];
 
@@ -36,9 +39,58 @@ export default function Testimonials() {
   );
 
   return (
-    <section className="bg-white py-20">
-      <div className="container-x">
-        <h2 className="text-center text-3xl lg:text-4xl text-brand-blue">
+    <section
+      className="relative py-20 overflow-hidden"
+      style={{
+        background: "linear-gradient(135deg, #f0f6ff 0%, #e8f3fa 50%, #f5f7fb 100%)",
+      }}
+    >
+      {/* Decorative giant quote mark */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -top-6 left-6 lg:left-16 select-none"
+        style={{
+          fontFamily: "Georgia, serif",
+          fontSize: "clamp(180px, 20vw, 280px)",
+          lineHeight: 1,
+          color: "#0064b0",
+          opacity: 0.06,
+          fontWeight: 900,
+          userSelect: "none",
+        }}
+      >
+        &ldquo;
+      </div>
+
+      {/* Texture top-right */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute top-0 right-0 w-72 h-72 opacity-60 rotate-90"
+        style={{
+          backgroundImage: "url('/images/texture-lines.svg')",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "contain",
+        }}
+      />
+      {/* Texture bottom-left */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute bottom-0 left-0 w-72 h-72 opacity-60 -rotate-90"
+        style={{
+          backgroundImage: "url('/images/texture-lines.svg')",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "contain",
+        }}
+      />
+
+      {/* Accent circle */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -bottom-20 -right-20 w-80 h-80 rounded-full bg-brand-blue opacity-[0.04]"
+      />
+
+      <div className="container-x relative">
+        <h2 className="text-center text-3xl lg:text-4xl text-brand-blue uppercase tracking-wide">
           Real Stories, Real Impact
         </h2>
         <p className="text-center mt-3 text-brand-muted">
@@ -50,7 +102,7 @@ export default function Testimonials() {
           <button
             onClick={prev}
             aria-label="Previous"
-            className="shrink-0 w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center hover:bg-slate-100"
+            className="shrink-0 w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:bg-brand-blue hover:text-white hover:border-brand-blue transition-colors shadow-sm"
           >
             <ChevronLeft size={20} />
           </button>
@@ -59,14 +111,19 @@ export default function Testimonials() {
             {visible.map((t, i) => (
               <div
                 key={`${t.name}-${i}`}
-                className="bg-white rounded-2xl p-6 border border-slate-100 shadow-[0_4px_18px_rgba(15,27,61,0.06)]"
+                className="bg-white rounded-2xl p-6 border border-white shadow-[0_6px_24px_rgba(0,100,176,0.10)] flex flex-col"
               >
-                <p className="text-sm text-brand-ink leading-relaxed">
-                  &ldquo;{t.quote}&rdquo;
+                {/* Big quote icon */}
+                <div className="text-brand-blue/20 text-6xl font-serif leading-none mb-2 select-none">&ldquo;</div>
+                <p className="text-sm text-brand-ink leading-relaxed flex-1">
+                  {t.quote}
                 </p>
-                <div className="mt-5 border-t border-dashed border-brand-orange/40 pt-3">
-                  <p className="text-brand-orange font-bold text-sm">{t.name}</p>
-                  <p className="text-brand-muted text-xs">{t.role}</p>
+                <div className="mt-5 flex items-center gap-3">
+                  <div className={`w-1 h-10 rounded-full ${t.accent} shrink-0`} />
+                  <div>
+                    <p className="text-brand-blue font-bold text-sm">{t.name}</p>
+                    <p className="text-brand-muted text-xs">{t.role}</p>
+                  </div>
                 </div>
               </div>
             ))}
@@ -75,10 +132,26 @@ export default function Testimonials() {
           <button
             onClick={next}
             aria-label="Next"
-            className="shrink-0 w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center hover:bg-slate-100"
+            className="shrink-0 w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:bg-brand-blue hover:text-white hover:border-brand-blue transition-colors shadow-sm"
           >
             <ChevronRight size={20} />
           </button>
+        </div>
+
+        {/* Dot indicators */}
+        <div className="mt-8 flex items-center justify-center gap-2">
+          {testimonials.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setStart(i)}
+              className={`w-2 h-2 rounded-full transition-all ${
+                i === start % testimonials.length
+                  ? "bg-brand-blue w-6"
+                  : "bg-brand-blue/25"
+              }`}
+              aria-label={`Go to testimonial ${i + 1}`}
+            />
+          ))}
         </div>
       </div>
     </section>

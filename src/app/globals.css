@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0);     }
+}
+@keyframes reveal-fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes text-swap-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+@keyframes loader-exit {
+  from { opacity: 1; }
+  to   { opacity: 0; pointer-events: none; }
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -9,8 +26,14 @@
   body {
     @apply bg-white text-brand-ink font-sans antialiased;
   }
-  h1, h2, h3, h4 {
-    @apply font-bold tracking-tight;
+  a {
+    text-decoration: none;
+  }
+  h1, h2 {
+    @apply font-title font-bold tracking-tight;
+  }
+  h3, h4, h5, h6 {
+    @apply font-sans font-bold tracking-tight;
   }
 }
 
@@ -19,7 +42,7 @@
     @apply mx-auto w-full max-w-container px-6 lg:px-10;
   }
   .btn {
-    @apply inline-flex items-center justify-center font-semibold rounded-full px-6 py-3 transition-colors;
+    @apply inline-flex items-center justify-center font-semibold rounded-full px-6 py-3 transition-colors no-underline;
   }
   .btn-orange {
     @apply btn bg-brand-orange text-white hover:bg-orange-600;

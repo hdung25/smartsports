@@ -6,19 +6,21 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          blue: "#1B3A8A",
-          "blue-deep": "#143076",
-          "blue-card": "#1F4FA8",
-          orange: "#F26B2A",
-          green: "#16C172",
-          "green-dark": "#13A862",
+          blue: "#0064b0",
+          "blue-deep": "#004d8a",
+          "blue-card": "#0052a3",
+          orange: "#fc4c00",
+          yellow: "#ffcc00",
+          green: "#9ad600",
+          "green-dark": "#7ab800",
           ink: "#0E1B3D",
           muted: "#5B6B8A",
           surface: "#F5F7FB",
         },
       },
       fontFamily: {
-        sans: ["var(--font-poppins)", "system-ui", "sans-serif"],
+        title: ["var(--font-montserrat)", "system-ui", "sans-serif"],
+        sans: ["var(--font-open-sans)", "system-ui", "sans-serif"],
       },
       maxWidth: {
         container: "1200px",

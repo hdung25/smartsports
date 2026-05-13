@@ -1,23 +1,72 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+
 const stats = [
   {
-    pct: "41%",
+    value: 41,
+    suffix: "%",
     bg: "bg-brand-blue-card",
     title: "of Illinois students are\nchronically absent",
     source: "Source: Illinois State Board of Education",
   },
   {
-    pct: "26%",
+    value: 26,
+    suffix: "%",
     bg: "bg-brand-orange",
     title: "of students proficient\nin math",
     source: "Source: National Assessment of Educational Progress",
   },
   {
-    pct: "31%",
+    value: 31,
+    suffix: "%",
     bg: "bg-brand-green",
     title: "of students proficient\nin reading",
     source: "Source: National Assessment of Educational Progress",
   },
 ];
+
+function AnimatedStat({ value, suffix, bg, title, source }: (typeof stats)[0]) {
+  const [count, setCount] = useState(0);
+  const ref = useRef<HTMLDivElement>(null);
+  const started = useRef(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !started.current) {
+          started.current = true;
+          const duration = 1600;
+          const fps = 60;
+          const totalFrames = (duration / 1000) * fps;
+          let frame = 0;
+          const timer = setInterval(() => {
+            frame++;
+            const progress = frame / totalFrames;
+            const eased = 1 - Math.pow(1 - progress, 3);
+            setCount(Math.min(Math.round(eased * value), value));
+            if (frame >= totalFrames) clearInterval(timer);
+          }, 1000 / fps);
+        }
+      },
+      { threshold: 0.4 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [value]);
+
+  return (
+    <div ref={ref} className={`${bg} rounded-2xl p-8 text-center shadow-lg`}>
+      <div className="text-5xl lg:text-6xl font-extrabold font-title">
+        {count}{suffix}
+      </div>
+      <p className="mt-3 text-base whitespace-pre-line leading-snug">{title}</p>
+      <p className="mt-4 text-[11px] italic opacity-90">{source}</p>
+    </div>
+  );
+}
 
 export default function WhyItMatters() {
   return (
@@ -37,21 +86,12 @@ export default function WhyItMatters() {
       />
 
       <div className="container-x relative">
-        <h2 className="text-center text-3xl lg:text-4xl uppercase tracking-wide">
+        <h2 className="text-center text-3xl lg:text-4xl uppercase tracking-wide text-white">
           Why It Matters
         </h2>
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-          {stats.map(({ pct, bg, title, source }) => (
-            <div
-              key={pct}
-              className={`${bg} rounded-2xl p-8 text-center shadow-lg`}
-            >
-              <div className="text-5xl lg:text-6xl font-extrabold">{pct}</div>
-              <p className="mt-3 text-base whitespace-pre-line leading-snug">
-                {title}
-              </p>
-              <p className="mt-4 text-[11px] italic opacity-90">{source}</p>
-            </div>
+          {stats.map((stat) => (
+            <AnimatedStat key={stat.value} {...stat} />
           ))}
         </div>
 
