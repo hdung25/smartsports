@@ -20,7 +20,7 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Smart Sports — Where Sports Connect to Opportunity",
+  title: "My Smart Sports",
   description:
     "Smart Sports integrates sports and academics to build practical skills and early exposure to career pathways that prepare youth for what comes next.",
 };
