@@ -57,7 +57,7 @@ export default function UpcomingEvents() {
     <section className="relative bg-white py-14 sm:py-20 overflow-hidden">
       <div
         aria-hidden
-        className="pointer-events-none absolute top-0 right-0 w-48 h-48 sm:w-72 sm:h-72 -scale-x-100"
+        className="pointer-events-none absolute top-0 right-0 w-28 h-28 sm:w-44 sm:h-44 opacity-50 -scale-x-100"
         style={{
           backgroundImage: "url('/images/hieuung-bg.png')",
           backgroundRepeat: "no-repeat",
@@ -67,7 +67,7 @@ export default function UpcomingEvents() {
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute bottom-0 left-0 w-48 h-48 sm:w-72 sm:h-72 -scale-y-100"
+        className="pointer-events-none absolute bottom-0 left-0 w-28 h-28 sm:w-44 sm:h-44 opacity-50 -scale-y-100"
         style={{
           backgroundImage: "url('/images/hieuung-bg.png')",
           backgroundRepeat: "no-repeat",
