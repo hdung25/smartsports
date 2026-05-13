@@ -11,11 +11,11 @@ const points = [
 
 export default function SuccessLooksLike() {
   return (
-    <section className="bg-brand-surface py-20">
-      <div className="container-x grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div className="relative h-[320px] lg:h-[420px] rounded-2xl overflow-hidden">
+    <section className="bg-brand-surface py-14 sm:py-20">
+      <div className="container-x grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="relative h-[260px] sm:h-[320px] lg:h-[420px] rounded-2xl overflow-hidden">
           <Image
-            src="/images/pic6.png"
+            src="/images/risehand.jpg"
             alt="Students raising hands"
             fill
             className="object-cover"
@@ -23,7 +23,7 @@ export default function SuccessLooksLike() {
           />
         </div>
         <div>
-          <h2 className="text-3xl lg:text-4xl text-brand-blue">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl text-brand-blue">
             What Success Looks Like
           </h2>
           <p className="mt-4 text-brand-muted leading-relaxed max-w-md">

@@ -14,8 +14,8 @@ export default function Footer() {
             height={140}
             className="h-auto w-[180px]"
           />
-          <p className="mt-4 text-sm text-brand-ink">
-            Smart Sports is a registered 501 (c)3 nonprofit
+          <p className="mt-4 text-xs text-brand-ink whitespace-nowrap">
+            Smart Sports is a registered 501(c)3 nonprofit
           </p>
           <Link
             href="#support"

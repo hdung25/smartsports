@@ -38,9 +38,11 @@ export default function Testimonials() {
     (i) => testimonials[(start + i) % testimonials.length]
   );
 
+  const single = testimonials[start % testimonials.length];
+
   return (
     <section
-      className="relative py-20 overflow-hidden"
+      className="relative py-14 sm:py-20 overflow-hidden"
       style={{
         background: "linear-gradient(135deg, #f0f6ff 0%, #e8f3fa 50%, #f5f7fb 100%)",
       }}
@@ -67,7 +69,7 @@ export default function Testimonials() {
         aria-hidden
         className="pointer-events-none absolute top-0 right-0 w-72 h-72 opacity-60 rotate-90"
         style={{
-          backgroundImage: "url('/images/texture-lines.svg')",
+          backgroundImage: "url('/images/hieuung-bg.png')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "contain",
         }}
@@ -77,7 +79,7 @@ export default function Testimonials() {
         aria-hidden
         className="pointer-events-none absolute bottom-0 left-0 w-72 h-72 opacity-60 -rotate-90"
         style={{
-          backgroundImage: "url('/images/texture-lines.svg')",
+          backgroundImage: "url('/images/hieuung-bg.png')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "contain",
         }}
@@ -90,30 +92,47 @@ export default function Testimonials() {
       />
 
       <div className="container-x relative">
-        <h2 className="text-center text-3xl lg:text-4xl text-brand-blue uppercase tracking-wide">
+        <h2 className="text-center text-2xl sm:text-3xl lg:text-4xl text-brand-blue uppercase tracking-wide">
           Real Stories, Real Impact
         </h2>
-        <p className="text-center mt-3 text-brand-muted">
+        <p className="text-center mt-3 text-sm sm:text-base text-brand-muted px-2">
           Hear from the students, parents, and mentors who
           <br className="hidden md:block" /> are experiencing the transformation.
         </p>
 
-        <div className="mt-12 flex items-center gap-4">
+        <div className="mt-10 md:mt-12 flex items-center gap-2 sm:gap-4">
           <button
             onClick={prev}
             aria-label="Previous"
-            className="shrink-0 w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:bg-brand-blue hover:text-white hover:border-brand-blue transition-colors shadow-sm"
+            className="shrink-0 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:bg-brand-blue hover:text-white hover:border-brand-blue transition-colors shadow-sm"
           >
             <ChevronLeft size={20} />
           </button>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 flex-1">
+          {/* Mobile: single card */}
+          <div className="md:hidden flex-1">
+            <div className="bg-white rounded-2xl p-5 border border-white shadow-[0_6px_24px_rgba(0,100,176,0.10)] flex flex-col">
+              <div className="text-brand-blue/20 text-6xl font-serif leading-none mb-2 select-none">&ldquo;</div>
+              <p className="text-sm text-brand-ink leading-relaxed flex-1">
+                {single.quote}
+              </p>
+              <div className="mt-5 flex items-center gap-3">
+                <div className={`w-1 h-10 rounded-full ${single.accent} shrink-0`} />
+                <div>
+                  <p className="text-brand-blue font-bold text-sm">{single.name}</p>
+                  <p className="text-brand-muted text-xs">{single.role}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Tablet/Desktop: 3 cards */}
+          <div className="hidden md:grid grid-cols-3 gap-6 flex-1">
             {visible.map((t, i) => (
               <div
                 key={`${t.name}-${i}`}
                 className="bg-white rounded-2xl p-6 border border-white shadow-[0_6px_24px_rgba(0,100,176,0.10)] flex flex-col"
               >
-                {/* Big quote icon */}
                 <div className="text-brand-blue/20 text-6xl font-serif leading-none mb-2 select-none">&ldquo;</div>
                 <p className="text-sm text-brand-ink leading-relaxed flex-1">
                   {t.quote}
@@ -132,7 +151,7 @@ export default function Testimonials() {
           <button
             onClick={next}
             aria-label="Next"
-            className="shrink-0 w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:bg-brand-blue hover:text-white hover:border-brand-blue transition-colors shadow-sm"
+            className="shrink-0 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:bg-brand-blue hover:text-white hover:border-brand-blue transition-colors shadow-sm"
           >
             <ChevronRight size={20} />
           </button>

@@ -2,22 +2,22 @@ import Image from "next/image";
 
 const items = [
   {
-    img: "/images/final_branded_drills.png",
+    img: "/images/wmd1.png",
     title: "Not just sports",
     desc: "Sports are the entry point, not the outcome.",
   },
   {
-    img: "/images/final_branded_math_sports.png",
+    img: "/images/wmd2.jpg",
     title: "Not just academics",
     desc: "Scholars apply learning in practical, hands-on scenarios, not abstract instruction.",
   },
   {
-    img: "/images/final_branded_kinetic_lab.png",
+    img: "/images/wmd3.png",
     title: "Not just exposure",
     desc: "Career pathways are introduced early and intentionally.",
   },
   {
-    img: "/images/final_branded_teamwork.png",
+    img: "/images/wmd4.jpg",
     title: "Not just participation",
     desc: "Every experience is designed to prepare youth for what comes next.",
   },
@@ -25,13 +25,13 @@ const items = [
 
 export default function WhatMakesDifferent() {
   return (
-    <section id="about" className="relative bg-white py-16 overflow-hidden">
+    <section id="about" className="relative bg-white py-12 sm:py-16 overflow-hidden">
       {/* texture corners */}
       <div
         aria-hidden
         className="pointer-events-none absolute top-0 right-0 w-80 h-80 opacity-80 rotate-90"
         style={{
-          backgroundImage: "url('/images/texture-lines.svg')",
+          backgroundImage: "url('/images/hieuung-bg.png')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "contain",
         }}
@@ -40,21 +40,21 @@ export default function WhatMakesDifferent() {
         aria-hidden
         className="pointer-events-none absolute bottom-0 left-0 w-80 h-80 opacity-80 -rotate-90"
         style={{
-          backgroundImage: "url('/images/texture-lines.svg')",
+          backgroundImage: "url('/images/hieuung-bg.png')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "contain",
         }}
       />
 
       <div className="container-x relative">
-        <h2 className="text-center text-3xl lg:text-4xl text-brand-blue uppercase tracking-wide">
+        <h2 className="text-center text-2xl sm:text-3xl lg:text-4xl text-brand-blue uppercase tracking-wide">
           What Makes Us Different
         </h2>
-        <p className="text-center mt-3 text-brand-muted">
+        <p className="text-center mt-3 text-sm sm:text-base text-brand-muted px-2">
           A model designed to align learning, engagement, and future opportunity.
         </p>
 
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="mt-8 sm:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
           {items.map((item) => (
             <div
               key={item.title}

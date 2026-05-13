@@ -58,8 +58,8 @@ function AnimatedStat({ value, suffix, bg, title, source }: (typeof stats)[0]) {
   }, [value]);
 
   return (
-    <div ref={ref} className={`${bg} rounded-2xl p-8 text-center shadow-lg`}>
-      <div className="text-5xl lg:text-6xl font-extrabold font-title">
+    <div ref={ref} className={`${bg} rounded-2xl p-6 sm:p-8 text-center shadow-lg`}>
+      <div className="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-title">
         {count}{suffix}
       </div>
       <p className="mt-3 text-base whitespace-pre-line leading-snug">{title}</p>
@@ -72,7 +72,7 @@ export default function WhyItMatters() {
   return (
     <section
       id="impact"
-      className="relative bg-brand-blue text-white py-20 overflow-hidden"
+      className="relative bg-brand-blue text-white py-14 sm:py-20 overflow-hidden"
     >
       <div
         aria-hidden
@@ -86,18 +86,18 @@ export default function WhyItMatters() {
       />
 
       <div className="container-x relative">
-        <h2 className="text-center text-3xl lg:text-4xl uppercase tracking-wide text-white">
+        <h2 className="text-center text-2xl sm:text-3xl lg:text-4xl uppercase tracking-wide text-white">
           Why It Matters
         </h2>
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="mt-8 sm:mt-12 grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
           {stats.map((stat) => (
             <AnimatedStat key={stat.value} {...stat} />
           ))}
         </div>
 
         <div className="mt-12 text-center max-w-3xl mx-auto">
-          <p className="text-lg lg:text-xl font-semibold leading-relaxed">
-            When young people do not see how what they are
+          <p className="text-base sm:text-lg lg:text-xl font-semibold leading-relaxed">
+            When young people do not see how what they are{" "}
             <br className="hidden md:block" />
             learning connects to their future, they disengage.
           </p>
