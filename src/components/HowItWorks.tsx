@@ -60,19 +60,19 @@ export default function HowItWorks() {
               key={title}
               className="bg-white rounded-3xl p-6 sm:p-7 shadow-[0_6px_24px_rgba(15,27,61,0.08)] border border-slate-100"
             >
-              <div className="flex items-center gap-4 mb-4">
+              <div className="flex items-center gap-3 mb-4">
                 <div
-                  className={`shrink-0 w-14 h-14 sm:w-16 sm:h-16 rounded-full ${bg} flex items-center justify-center`}
+                  className={`shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full ${bg} flex items-center justify-center`}
                 >
                   <Image
                     src={icon}
                     alt=""
-                    width={34}
-                    height={34}
+                    width={28}
+                    height={28}
                     className="brightness-0 invert"
                   />
                 </div>
-                <h3 className="text-brand-blue text-base sm:text-lg font-bold leading-tight whitespace-pre-line flex-1">
+                <h3 className="text-brand-blue text-[15px] lg:text-base font-bold leading-tight whitespace-pre-line flex-1 min-w-0">
                   {title}
                 </h3>
               </div>
