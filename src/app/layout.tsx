@@ -23,6 +23,10 @@ export const metadata: Metadata = {
   title: "My Smart Sports",
   description:
     "Smart Sports integrates sports and academics to build practical skills and early exposure to career pathways that prepare youth for what comes next.",
+  icons: {
+    icon: "/images/logonew.png",
+    apple: "/images/logonew.png",
+  },
 };
 
 export default function RootLayout({
