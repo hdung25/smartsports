@@ -35,14 +35,14 @@ export default function Header() {
           <div className="flex items-center gap-6">
             <Link
               href="/events"
-              className="text-brand-blue font-semibold hover:text-brand-orange transition-colors"
+              className="text-gray-900 font-semibold hover:text-brand-orange transition-colors"
             >
               Events
             </Link>
-            <span className="text-brand-blue/40">|</span>
+            <span className="text-gray-400">|</span>
             <Link
               href="/blogs"
-              className="text-brand-blue font-semibold hover:text-brand-orange transition-colors"
+              className="text-gray-900 font-semibold hover:text-brand-orange transition-colors"
             >
               Blogs
             </Link>
@@ -59,7 +59,7 @@ export default function Header() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="text-brand-ink font-semibold hover:text-brand-blue transition-colors"
+                className="text-brand-blue font-semibold hover:text-brand-orange transition-colors"
               >
                 {link.label}
               </Link>
@@ -94,7 +94,7 @@ export default function Header() {
                 key={link.label}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="text-brand-ink font-semibold py-2 hover:text-brand-blue"
+                className="text-brand-blue font-semibold py-2 hover:text-brand-orange"
               >
                 {link.label}
               </Link>
@@ -103,14 +103,14 @@ export default function Header() {
             <Link
               href="/events"
               onClick={() => setOpen(false)}
-              className="text-brand-blue font-semibold py-2"
+              className="text-gray-900 font-semibold py-2"
             >
               Events
             </Link>
             <Link
               href="/blogs"
               onClick={() => setOpen(false)}
-              className="text-brand-blue font-semibold py-2"
+              className="text-gray-900 font-semibold py-2"
             >
               Blogs
             </Link>

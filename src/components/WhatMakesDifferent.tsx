@@ -29,9 +29,9 @@ export default function WhatMakesDifferent() {
       {/* texture corners */}
       <div
         aria-hidden
-        className="pointer-events-none absolute top-0 right-0 w-28 h-28 sm:w-44 sm:h-44 opacity-50 -scale-x-100"
+        className="pointer-events-none absolute top-0 right-0 w-48 h-48 sm:w-64 sm:h-64 -scale-x-100"
         style={{
-          backgroundImage: "url('/images/hieuung-bg.png')",
+          backgroundImage: "url('/images/corner-arc.svg')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "contain",
           backgroundPosition: "top left",
@@ -39,9 +39,9 @@ export default function WhatMakesDifferent() {
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute bottom-0 left-0 w-28 h-28 sm:w-44 sm:h-44 opacity-50 -scale-y-100"
+        className="pointer-events-none absolute bottom-0 left-0 w-48 h-48 sm:w-64 sm:h-64 -scale-y-100"
         style={{
-          backgroundImage: "url('/images/hieuung-bg.png')",
+          backgroundImage: "url('/images/corner-arc.svg')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "contain",
           backgroundPosition: "top left",

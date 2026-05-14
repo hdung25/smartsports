@@ -34,7 +34,8 @@
       "Bash(cp \"D:/smartsport/image/pic1new.png\" \"D:/smartsports/image/pic1new.png\")",
       "Bash(curl -sL --max-time 30 -A \"Mozilla/5.0\" \"https://upload.wikimedia.org/wikipedia/commons/3/32/Blank_US_Map_%28states_only%29.svg\" -o \"D:/smartsports/public/images/us-map.svg\")",
       "Bash(cp /tmp/test.svg \"D:/smartsports/public/images/us-map.svg\" && ls -la \"D:/smartsports/public/images/us-map.svg\")",
-      "Bash(curl -sI http://localhost:3000/images/us-map.svg)"
+      "Bash(curl -sI http://localhost:3000/images/us-map.svg)",
+      "Bash(ls \"D:/smartsports/public/images/\" 2>/dev/null | head -40 || find \"D:/smartsports/public\" -type f 2>/dev/null | head -40)"
     ]
   }
 }

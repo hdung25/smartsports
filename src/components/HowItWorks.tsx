@@ -33,9 +33,9 @@ export default function HowItWorks() {
       {/* texture corners */}
       <div
         aria-hidden
-        className="pointer-events-none absolute top-0 left-0 w-28 h-28 sm:w-44 sm:h-44 opacity-50"
+        className="pointer-events-none absolute top-0 left-0 w-48 h-48 sm:w-64 sm:h-64"
         style={{
-          backgroundImage: "url('/images/hieuung-bg.png')",
+          backgroundImage: "url('/images/corner-arc.svg')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "contain",
           backgroundPosition: "top left",
@@ -43,9 +43,9 @@ export default function HowItWorks() {
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute bottom-0 right-0 w-28 h-28 sm:w-44 sm:h-44 opacity-50 rotate-180"
+        className="pointer-events-none absolute bottom-0 right-0 w-48 h-48 sm:w-64 sm:h-64 rotate-180"
         style={{
-          backgroundImage: "url('/images/hieuung-bg.png')",
+          backgroundImage: "url('/images/corner-arc.svg')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "contain",
           backgroundPosition: "top left",
